@@ -59,7 +59,7 @@ const Nav = (options) => {
         duration: 0.5
       },
       border: "1px solid white",
-      background: "rgba(135, 182, 54, 0.95)",
+      background: "rgba(135, 182, 54, .95)",
       boxShadow: "0px 0px 4px rgba(255, 255, 255, 1)"
     }
   };

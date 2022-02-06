@@ -1,22 +1,36 @@
-import React, { useRef } from "react";
-import HeroImage from "../media/images/pexels.jpg";
+import React from "react";
+import { Parallax } from "react-parallax";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
 import "../styles/home.css";
-import { useParallax } from "react-scroll-parallax";
+import { heroImages } from "../components/home/heroImages";
+
 const Home = () => {
-  const target = useRef(null);
-  const parallax = useParallax({
-    speed: -100,
-    targetElement: target.current
-  });
   return (
     <div className="home">
       <div className="home-hero-container">
-        <img
-          ref={parallax.ref}
-          className="home-hero-container-img"
-          src={HeroImage}
-          alt="hero image on main screen"
-        />
+        <Swiper
+          autoplay={{ delay: 2500 }}
+          modules={[Autoplay]}
+          className="mySwiper"
+          centeredSlides={true}
+          spaceBetween={30}
+        >
+          {heroImages.map((image) => {
+            return (
+              <SwiperSlide key={image}>
+                <Parallax
+                  bgImage={image}
+                  alt="hero image for home page"
+                  strength={500}
+                  style={{ height: "100%", width: "100%", objectFit: "fill" }}
+                ></Parallax>
+                {/* <img src={image} className="home-hero-container-img" /> */}
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
       <div className="home-mission-statement">hello</div>
     </div>

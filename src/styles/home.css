@@ -1,20 +1,25 @@
 .home {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .home-hero-container {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
-
+.mySwiper {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
 .home-hero-container-img {
-    width:100%;
-    max-height:100%;
-    object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+  object-fit: fill;
 }
 
 .home-mission-statement {
-    height: 100vh;
-    background-image: linear-gradient(to right, green, aqua);
-    background: white;
+  height: 100vh;
+  background-image: linear-gradient(to right, green, aqua);
+  background: white;
 }
