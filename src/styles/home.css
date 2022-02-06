@@ -1,0 +1,20 @@
+.home {
+    min-height: 100vh;
+}
+
+.home-hero-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.home-hero-container-img {
+    width:100%;
+    max-height:100%;
+    object-fit: cover;
+}
+
+.home-mission-statement {
+    height: 100vh;
+    background-image: linear-gradient(to right, green, aqua);
+    background: white;
+}
