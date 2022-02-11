@@ -5,66 +5,16 @@ import "../../styles/nav.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
+import {
+  linkAnimation,
+  sideAnimation,
+  buttonAnimation
+} from "./Nav.animations";
+import getWindowDimensions from "../../assets/WindowDimensions";
 
-const Nav = (options) => {
+const Nav = () => {
   const [x, cyclex] = useCycle(false, true);
-  const sideAnimation = {
-    open: {
-      transition: {
-        staggerChildren: 0.2,
-        staggerDirection: 1,
-        delay: 0.5,
-        duration: 0.5
-      },
-
-      width: "33vh",
-      height: "calc(100vh)"
-    },
-    close: {
-      transition: {
-        staggerChildren: 0.2,
-        staggerDirection: -1
-      },
-      width: 0,
-      height: 0
-    }
-  };
-
-  const linkAnimation = {
-    open: {
-      opacity: 1,
-      transition: {
-        delay: 1,
-        duration: 0.5
-      }
-    },
-    close: {
-      opacity: 0
-    }
-  };
-
-  const buttonAnimation = {
-    open: {
-      background: "none",
-      boxShadow: "none",
-      transition: {
-        delay: 0.5,
-        duration: 0.5
-      },
-      border: "none"
-    },
-    close: {
-      transition: {
-        delay: 1,
-        duration: 0.5
-      },
-      border: "1px solid white",
-      background: "rgba(135, 182, 54, .95)",
-      boxShadow: "0px 0px 4px rgba(255, 255, 255, 1)"
-    }
-  };
-
-  //need to make the button overlay over the entire navigation when opened
+  const { width } = getWindowDimensions();
 
   return (
     <div>
@@ -85,7 +35,7 @@ const Nav = (options) => {
           <motion.div
             animate={x ? "open" : "close"}
             initial="close"
-            variants={sideAnimation}
+            variants={sideAnimation(width > 800 ? "300px" : "100vw")}
             className="nav"
             exit={{
               width: 0,

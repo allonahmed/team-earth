@@ -10,10 +10,10 @@ const options = {
   enableCameraRotate: false,
   enableCameraZoom: false,
   enableDefocus: false,
-  globeCloudsOpacity: 0.3,
+  globeCloudsOpacity: 0.7,
   // globeGlowCoefficient: 0.1,
   globeGlowColor: "#d1d1d1",
-  globeGlowPower: 3
+  globeGlowPower: 100
   // globeGlowRadiusScale: 0.5
 };
 export default options;

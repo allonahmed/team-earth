@@ -2,24 +2,193 @@
   min-height: 100vh;
 }
 
-.home-hero-container {
+/* styling for parallax svg background */
+.bg-wave {
+  width: 100%;
   height: 100vh;
-  width: 100%;
-}
-.mySwiper {
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100%;
-}
-.home-hero-container-img {
-  width: 100%;
-  min-height: 100%;
-  object-fit: fill;
+  position: absolute;
 }
 
-.home-mission-statement {
+/* LANDING PAGE */
+.landing-container {
   height: 100vh;
-  background-image: linear-gradient(to right, green, aqua);
-  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-globe-girl {
+  z-index: 0;
+  position: absolute;
+  top: 30vh;
+  left: 0;
+  height: 70vh;
+  width: 50vw;
+  transform: rotate(10deg) scaleX(-1);
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(15px, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.landing-text-container {
+  z-index: 1;
+  margin-top: 100px;
+  height: calc(100vh - 200px);
+  width: 90%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 3px 3px 35px #006993, 3px 3px 35px #188785;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  border-bottom-left-radius: 200%90%;
+  border-bottom-right-radius: 200%90%;
+  /* border-radius: 200%100%; */
+}
+
+.landing-text-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 40%;
+  align-items: center;
+  text-align: center;
+}
+.landing-text-container h2 {
+  text-decoration: underline;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 5px rgba(5, 5, 5, 0.6);
+  padding: 20px 0;
+}
+
+.landing-text-container p {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 5px rgba(5, 5, 5, 0.6);
+  font-size: 1.5rem;
+}
+
+.landing-slideshow {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 3px 3px 35px #006993;
+  margin-left: 50%;
+  height: 50%;
+  position: relative;
+}
+
+.landing-slide-text {
+  height: 70%;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 5px rgba(5, 5, 5, 0.6);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.landing-cta-button {
+  color: white;
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border: 1px solid rgba(183, 183, 183, 0.544);
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  background: #24957f;
+  z-index: 2;
+}
+
+.landing-slideshow-svg {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.7;
+  height: 150px;
+}
+
+/* should remove for mobile view */
+.landing-leave-button {
+  position: absolute;
+  top: calc(100vh - 50px);
+  background: none;
+  border: none;
+  transform: scale(3, 1);
+  color: #2ae2bd;
+  text-shadow: 0px 0px 20px rgba(36, 173, 43, 0.8);
+}
+
+/* HOME INFORMATION CONTENT */
+.home-content-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+}
+
+/* INTERACTIVE DATA INPUT CONTENT */
+.home-data-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid red;
+}
+
+/* Swiper news api slideshow */
+.home-news-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.mySwiper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-card {
+  height: 500px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+}
+
+.article-card img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
 }

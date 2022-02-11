@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Globe from "../globe/Globe";
+import options from "../globe/Globe.options";
 import { useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const Header = () => {
   const [disable, setDisable] = useState(true);
+  const [globeOptions, setOptions] = useState(options);
   const location = useLocation(); // used to get current pathname
 
   //if current pathname is === to the home url, make the button that reroutes you to home page disabled
@@ -13,8 +14,17 @@ const Header = () => {
   }, [location]);
 
   return (
-    <div className="header">
-      <Globe />
+    <div
+      className="header"
+      //updates globeOptions object on mouse events
+      onMouseOver={() =>
+        setOptions({ ...globeOptions, cameraAutoRotateSpeed: 40 })
+      }
+      onMouseOut={() =>
+        setOptions({ ...globeOptions, cameraAutoRotateSpeed: 10 })
+      }
+    >
+      <Globe height="90px" width="90px" options={globeOptions} />
       <button disabled={disable} onClick={() => (window.location.href = "/")}>
         <span
           style={{

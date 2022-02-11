@@ -1,5 +1,7 @@
 import React from "react";
 
+//error page when users puts in invalid URL
+
 const Error = () => {
   return (
     <div

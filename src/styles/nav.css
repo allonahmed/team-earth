@@ -22,11 +22,11 @@
   justify-content: center;
   color: rgba(238, 238, 238, 1);
   cursor: pointer;
-  background: #87b636f3;
+  background: #24957f;
 }
 
 .dropdown-icon:hover {
-  background: rgba(3, 130, 64, 0.6);
+  background: rgba(123, 131, 127, 0.6);
 }
 /* NAV LOGO */
 .header {
@@ -50,9 +50,9 @@
   background: transparent;
   background-image: linear-gradient(
     to right,
-    #88b636 25%,
+    #24957f 25%,
     #95ba5668 50%,
-    #88b636 75%
+    #24957f 75%
   );
   box-shadow: 2px 2px 5px #87b63684, -2px -2px 5px #2b63b884;
   border: none;
@@ -64,7 +64,7 @@
 }
 
 .header button:before {
-  background: linear-gradient(to right, #88b636 0%, #5d9b22 51%, #88b636 100%);
+  background: linear-gradient(to right, #24957f 0%, #24957f 51%, #24957f 100%);
   -webkit-mask: linear-gradient(to bottom, #0000 40%, #000);
   mask: linear-gradient(to bottom, #0000, #000);
   position: absolute;
@@ -80,9 +80,9 @@
 .header button:after {
   background-image: linear-gradient(
     to right,
-    #88b636 0%,
-    #5d9b22 51%,
-    #88b636 100%
+    #24957f 0%,
+    #24957f 51%,
+    #24957f 100%
   );
   z-index: -100;
   opacity: 0;
@@ -111,13 +111,8 @@
   z-index: 2;
   right: 0;
   height: 100vh;
-  background-image: linear-gradient(
-    to top,
-    #88b636 0%,
-    #5d9b22 50%,
-    #88b636 100%
-  );
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  width: 33vw;
+  background: #24957f;
   padding-top: 20vh;
 }
 
@@ -128,4 +123,18 @@
   font-size: 24px;
   text-shadow: 1px 1px 2px rgba(50, 50, 70, 0.5);
   font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    background: #24957ee7;
+    padding-top: 20vh;
+  }
 }
