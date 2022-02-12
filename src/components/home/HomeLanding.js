@@ -6,7 +6,7 @@ const HomeLanding = () => {
   return (
     <div>
       <div className="landing-container">
-        <img className="home-globe-girl" src={GlobeGirl} alt="globe girl svg" />
+        {/* <img className="home-globe-girl" src={GlobeGirl} alt="globe girl svg" /> */}
         <div className="landing-text-container">
           <div className="landing-text-content">
             <p>
