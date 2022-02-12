@@ -8,6 +8,8 @@ const Globe = ({ height, width, options }) => {
       width={width}
       options={options}
       globeBackgroundTexture={null}
+      focus={null}
+      style={{ border: "1px !important" }}
     />
   );
 };

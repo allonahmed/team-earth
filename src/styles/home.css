@@ -22,6 +22,7 @@
 .home-globe-girl {
   z-index: 0;
   position: absolute;
+  opacity: 0.7;
   top: 30vh;
   left: 0;
   height: 70vh;
@@ -68,30 +69,24 @@
   width: 80%;
   height: 40%;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
-.landing-text-container h2 {
-  text-decoration: underline;
-  font-size: 40px;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 1px 1px 5px rgba(5, 5, 5, 0.6);
-  padding: 20px 0;
-}
 
-.landing-text-container p {
+.landing-text-content p {
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 1px 1px 5px rgba(5, 5, 5, 0.6);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .landing-slideshow {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  width: 40%;
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  width: 50%;
+  background: rgba(201, 201, 201, 0.05);
   box-shadow: 3px 3px 35px #006993;
-  margin-left: 50%;
+  margin-left: 40%;
   height: 50%;
   position: relative;
 }
@@ -164,7 +159,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
 }
 .mySwiper {
   height: 100%;
@@ -183,8 +177,6 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: flex-start; */
 }
 
 .article-card img {

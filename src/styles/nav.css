@@ -1,53 +1,33 @@
-.NavBar {
+/* HEADER */
+.header {
+  position: absolute;
   display: flex;
-  width: 100%;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  /* background: #000; */
+  top: 40px;
+  width: 100%;
   height: 100px;
   z-index: 10;
-  position: fixed;
 }
-.dropdown-icon {
-  position: absolute;
-  z-index: 100;
-  right: 50px;
-  top: 50px;
-  height: 50px;
-  width: 50px;
-  border: none;
-  border-radius: 10px;
-  border: 1px solid white;
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(238, 238, 238, 1);
-  cursor: pointer;
-  background: #24957f;
-}
-
-.dropdown-icon:hover {
-  background: rgba(123, 131, 127, 0.6);
-}
-/* NAV LOGO */
-.header {
+.globe-container {
   display: inline-flex;
   flex-direction: column;
-  position: relative;
+  justify-content: center;
   align-items: center;
-  background-color: transparent;
-  top: 20px;
 }
 
 .header button {
-  font-size: 30px;
+  position: relative;
+  margin-top: -65px;
+  z-index: 100;
+  font-size: 40px;
   text-shadow: 1px 1px 2px rgba(6, 94, 27, 0.879);
   font-weight: 500;
   cursor: pointer;
-  padding: 0 5px;
+  padding: 5px 5px;
   text-transform: uppercase;
-  margin-top: -30px;
-  /* z-index: 2; */
-  background: transparent;
   background-image: linear-gradient(
     to right,
     #24957f 25%,
@@ -58,9 +38,7 @@
   border: none;
   border-radius: 6px;
   color: rgb(255, 255, 255);
-  transition: 2s;
-  z-index: 100;
-  position: relative;
+  transition: 2s ease;
 }
 
 .header button:before {
@@ -107,7 +85,7 @@
   flex-direction: column;
   align-items: flex-end;
   padding-top: 10vh;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   right: 0;
   height: 100vh;
@@ -123,6 +101,33 @@
   font-size: 24px;
   text-shadow: 1px 1px 2px rgba(50, 50, 70, 0.5);
   font-weight: 700;
+}
+
+/* dropdown button for navigation */
+.dropdown-icon {
+  position: fixed;
+  z-index: 100;
+  right: 50px;
+  top: 50px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-bottom-left-radius: 90%200%;
+  border-top-right-radius: 90%200%;
+  border-top-left-radius: 90%200%;
+  border-bottom-right-radius: 90%200%;
+  /* border: 1px solid white; */
+  box-shadow: 0px 0px 8px rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(238, 238, 238, 1);
+  cursor: pointer;
+  background: #24957f;
+}
+
+.dropdown-icon:hover {
+  background: rgba(123, 131, 127, 0.6);
 }
 
 @media only screen and (max-width: 800px) {

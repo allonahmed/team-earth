@@ -3,14 +3,19 @@
   padding: 0;
 }
 
+/* added to stop globe from having focus one clicking */
+*:focus {
+  outline: none;
+}
+
 body {
-  font-family: 'Optima', sans-serif;	
+  font-family: "Optima", sans-serif;
   font-size: 20px;
-  color: #0B0B0B;
+  color: #0b0b0b;
 }
 
 button {
-  font-family: 'Optima', sans-serif;	
+  font-family: "Optima", sans-serif;
 }
 .lower {
   padding-top: 120px;

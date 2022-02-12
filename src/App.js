@@ -1,15 +1,18 @@
 import React from "react";
-import NavBar from "./components/navigation/NavBar";
 import { Routes, Route } from "react-router-dom";
 import NavLinks from "./components/navigation/NavLinks";
 import "./App.css";
 import Home from "./pages/Home";
 import Error from "./assets/Error";
+import Nav from "./components/navigation/Nav";
+import Header from "./components/navigation/Header";
 
 const App = () => {
   return (
     <div className="App">
-      <NavBar />
+      <Header />
+      <Nav />
+
       <Routes>
         {NavLinks.map((element, id) => {
           return (

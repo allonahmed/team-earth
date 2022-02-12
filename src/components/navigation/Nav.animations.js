@@ -44,17 +44,15 @@ const buttonAnimation = {
     transition: {
       delay: 0.5,
       duration: 0.5
-    },
-    border: "none"
+    }
   },
   close: {
     transition: {
       delay: 1,
       duration: 0.5
     },
-    border: "1px solid white",
     background: "#24957F",
-    boxShadow: "0px 0px 4px rgba(255, 255, 255, 1)"
+    boxShadow: "0px 0px 8px rgba(255, 255, 255, 1)"
   }
 };
 

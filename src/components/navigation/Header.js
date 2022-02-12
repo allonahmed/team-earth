@@ -14,17 +14,18 @@ const Header = () => {
   }, [location]);
 
   return (
-    <div
-      className="header"
-      //updates globeOptions object on mouse events
-      onMouseOver={() =>
-        setOptions({ ...globeOptions, cameraAutoRotateSpeed: 40 })
-      }
-      onMouseOut={() =>
-        setOptions({ ...globeOptions, cameraAutoRotateSpeed: 10 })
-      }
-    >
-      <Globe height="90px" width="90px" options={globeOptions} />
+    <div className="header">
+      <div
+        className="globe-container"
+        onMouseOver={() =>
+          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 40 })
+        }
+        onMouseOut={() =>
+          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 10 })
+        }
+      >
+        <Globe height="150px" width="150px" options={globeOptions} />
+      </div>
       <button disabled={disable} onClick={() => (window.location.href = "/")}>
         <span
           style={{

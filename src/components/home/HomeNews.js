@@ -11,9 +11,7 @@ const HomeNews = () => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://newsapi.org/v2/everything?q=apple&from=2022-02-08&to=2022-02-08&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS}`
-      )
+      .get(`${process.env.REACT_APP_NEWS_URL}${process.env.REACT_APP_NEWS_KEY}`)
       .then((response) => {
         setData(response.data.articles);
       });

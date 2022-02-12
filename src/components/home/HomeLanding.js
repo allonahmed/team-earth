@@ -9,7 +9,6 @@ const HomeLanding = () => {
         <img className="home-globe-girl" src={GlobeGirl} alt="globe girl svg" />
         <div className="landing-text-container">
           <div className="landing-text-content">
-            <h2>Time to change the world</h2>
             <p>
               Our mission is to spread information and provide insight on how we
               can prevent climate change from destroying our planet Earth!
