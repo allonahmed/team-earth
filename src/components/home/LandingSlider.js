@@ -28,7 +28,8 @@ const Slider = () => {
       }}
       autoplay={{
         delay: 3000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
       }}
       loop={true}
       className="landing-swiper"
