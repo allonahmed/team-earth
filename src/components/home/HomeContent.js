@@ -1,10 +1,11 @@
 import React from "react";
+import TableContents from "./TableContents";
 
 const HomeContent = () => {
   return (
     <div className="home-content-container">
       {" "}
-      + home content goes here. ex:
+      <TableContents />
       <iframe
         title="climate change data"
         src="https://data.worldbank.org/share/widget?indicators=EN.ATM.CO2E.KT&topics=%5Bobject%20Object%5D"

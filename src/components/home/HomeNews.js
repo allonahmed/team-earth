@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Pagination, Mousewheel, Navigation } from "swiper";
 import useWindowDimensions from "../../assets/WindowDimensions";
 import DayConvertor from "../../assets/DayConvertor";
 import NewsCard from "./NewsCard";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import axios from "axios";
 
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css";
 
 const HomeNews = () => {
   const [data, setData] = useState([]);
   const { width, heigth } = useWindowDimensions();
+
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
 
   //converts date to formatted date needed for api
   const date = DayConvertor(new Date());
@@ -38,40 +44,62 @@ const HomeNews = () => {
 
   //reduces slides per view in our swiperslide based on window width
   const slidesPerView = () => {
-    if (width > 1450) {
-      return 4;
-    } else if (width > 1100) {
-      return 3;
-    } else if (width > 720) {
-      return 2;
-    } else if (width > 400) {
-      return 1;
+    const aspect = [3100, 2600, 2200, 1800, 1450, 1100, 720, 400];
+    for (let i = 0; i < aspect.length; i += 1) {
+      if (width > aspect[i]) {
+        return aspect.length - i;
+      }
     }
   };
-
+  const Next = () => {
+    return <button>next</button>;
+  };
   return (
     <div className="home-news-container">
       <h4>check out other news article relates to climate change</h4>
-      <Swiper
-        modules={[Autoplay, Pagination, Mousewheel, Keyboard]}
-        mousewheel={{
-          forceToAxis: true
-        }}
-        keyboard={true}
-        pagination={{
-          clickable: true
-        }}
-        slidesPerView={slidesPerView()}
-        className="news-swiper"
-      >
-        {data.map((article, id) => {
-          return (
-            <SwiperSlide key={id} className="news-slides">
-              <NewsCard article={article} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <div className="swiper-news-container">
+        <Swiper
+          modules={[Pagination, Navigation, Mousewheel]}
+          mousewheel={{
+            forceToAxis: true
+          }}
+          pagination={{
+            clickable: true
+          }}
+          slidesPerView={slidesPerView()}
+          className="news-swiper"
+          spaceBetween={1}
+          navigation={{
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = navigationPrevRef.current;
+            swiper.params.navigation.nextEl = navigationNextRef.current;
+          }}
+        >
+          {data.map((article, id) => {
+            return (
+              <SwiperSlide key={id} className="news-slides">
+                <NewsCard article={article} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <button
+          className="swiper-controls swiper-controls-prev"
+          ref={navigationPrevRef}
+        >
+          <ArrowBackIosNewIcon />
+        </button>
+
+        <button
+          className="swiper-controls swiper-controls-next"
+          ref={navigationNextRef}
+        >
+          <ArrowForwardIosIcon />
+        </button>
+      </div>
     </div>
   );
 };

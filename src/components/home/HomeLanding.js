@@ -1,5 +1,4 @@
 import React from "react";
-import { GlobeGirl } from "../../assets/SVGExport";
 import Slider from "./LandingSlider";
 
 const HomeLanding = () => {

@@ -39,7 +39,7 @@ const NewsCard = ({ article }) => {
           width: 400
         }}
       />
-      <CardContent>
+      <CardContent sx={{ background: "rgba(0,0,0,.1)" }}>
         <Typography variant="body1" sx={{ fontWeight: "900" }}>
           {article.title}
         </Typography>
