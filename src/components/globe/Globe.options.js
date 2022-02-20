@@ -11,9 +11,11 @@ const options = {
   enableCameraZoom: false,
   enableDefocus: false,
   globeCloudsOpacity: 0.7,
-  // globeGlowCoefficient: 0.1,
+  globeGlowCoefficient: 0.1,
   globeGlowColor: "#d1d1d1",
   globeGlowPower: 100
+  // ambientLightIntensity: 0.3
+
   // globeGlowRadiusScale: 0.5
 };
 export default options;

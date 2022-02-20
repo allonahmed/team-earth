@@ -47,7 +47,12 @@ const Nav = () => {
           >
             {NavLinks.map((element, id) => {
               return (
-                <Link className="nav-link" key={id} to={element.link}>
+                <Link
+                  className="nav-link"
+                  key={id}
+                  to={element.link}
+                  onClick={cyclex}
+                >
                   <motion.p
                     key={id}
                     variants={linkAnimation}

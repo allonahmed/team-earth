@@ -14,7 +14,7 @@ import "swiper/css";
 
 const HomeNews = () => {
   const [data, setData] = useState([]);
-  const { width, heigth } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);

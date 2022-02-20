@@ -8,7 +8,7 @@ const TableContents = () => {
         {TableData.map((data) => {
           return (
             <li key={data}>
-              <a>{data.title}</a>
+              <a href="#">{data.title}</a>
             </li>
           );
         })}

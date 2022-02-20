@@ -20,3 +20,8 @@ button {
 .lower {
   padding-top: 120px;
 }
+.bg-wave {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}

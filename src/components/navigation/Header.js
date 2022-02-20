@@ -3,6 +3,8 @@ import Globe from "../globe/Globe";
 import options from "../globe/Globe.options";
 import { useLocation } from "react-router-dom";
 
+import "../../styles/nav.css";
+
 const Header = () => {
   const [disable, setDisable] = useState(true);
   const [globeOptions, setOptions] = useState(options);
@@ -17,12 +19,12 @@ const Header = () => {
     <div className="header">
       <div
         className="globe-container"
-        onMouseOver={() =>
-          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 40 })
-        }
-        onMouseOut={() =>
-          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 10 })
-        }
+        // onMouseOver={() =>
+        //   setOptions({ ...globeOptions, cameraAutoRotateSpeed: 40 })
+        // }
+        // onMouseOut={() =>
+        //   setOptions({ ...globeOptions, cameraAutoRotateSpeed: 10 })
+        // }
       >
         <Globe height="150px" width="150px" options={globeOptions} />
       </div>

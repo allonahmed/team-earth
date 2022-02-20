@@ -25,6 +25,7 @@
   font-weight: 500;
   cursor: pointer;
   padding: 5px 5px;
+  background: none;
   text-transform: uppercase;
   background-image: linear-gradient(
     to right,
@@ -32,6 +33,7 @@
     #95ba5668 50%,
     #24957f 75%
   );
+
   box-shadow: 2px 2px 5px #87b63684, -2px -2px 5px #2b63b884;
   border: none;
   border-radius: 6px;
