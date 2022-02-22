@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SolutionCard from "../components/solutions/SolutionCard";
 import CardData from "../components/solutions/SolutionCardData";
 import SolutionsGlobe from "../components/solutions/SolutionsGlobe";
+
 import "../styles/solutions.css";
 
 const Solutions = () => {

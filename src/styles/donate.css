@@ -1,0 +1,110 @@
+.donate-container {
+  min-height: 100vh;
+  padding-top: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-container {
+  height: 95vh;
+  width: 95vw;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.donate-slider {
+}
+.donate-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  position: absolute;
+  /* margin-top: -60px;
+  margin-left: -60px; */
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 40px 90px rgba(255, 255, 255, 0.323);
+
+  z-index: 1;
+  padding: 300px;
+  /* border: 3px solid black; */
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: grid;
+  place-content: center;
+  animation: spin 20s linear infinite;
+}
+
+.img-container {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+  animation-direction: reverse;
+  z-index: 100;
+}
+.content1 {
+  top: 0;
+  left: 25%;
+}
+.content2 {
+  top: 0;
+  right: 25%;
+}
+.content3 {
+  top: 25%;
+  left: 0%;
+}
+.content4 {
+  top: 25%;
+  right: 0%;
+}
+.content5 {
+  bottom: 25%;
+  left: 0;
+}
+.content6 {
+  bottom: 25%;
+  right: 0;
+}
+
+.content7 {
+  bottom: 0;
+  left: 25%;
+}
+.content8 {
+  bottom: 0;
+  right: calc(25%);
+}
+.brand-image {
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+  display: block;
+  /* animation: rotate 100s linear infinite; */
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
