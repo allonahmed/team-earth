@@ -19,25 +19,38 @@ const Header = () => {
     <div className="header">
       <div
         className="globe-container"
-        // onMouseOver={() =>
-        //   setOptions({ ...globeOptions, cameraAutoRotateSpeed: 40 })
-        // }
-        // onMouseOut={() =>
-        //   setOptions({ ...globeOptions, cameraAutoRotateSpeed: 10 })
-        // }
+        onMouseOver={() =>
+          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 20 })
+        }
+        onMouseOut={() =>
+          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 2 })
+        }
       >
-        <Globe height="150px" width="150px" options={globeOptions} />
+        <Globe height="300px" width="300px" options={globeOptions} />
       </div>
-      <button disabled={disable} onClick={() => (window.location.href = "/")}>
-        <span
-          style={{
-            color: "rgba(238, 238, 238,1)",
-            textShadow: "0px 0px 5px black"
-          }}
-        >
-          #
-        </span>
-        Team World
+      <button
+        onMouseOver={() =>
+          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 20 })
+        }
+        onMouseOut={() =>
+          setOptions({ ...globeOptions, cameraAutoRotateSpeed: 2 })
+        }
+        onClick={() => {
+          !disable ? (window.location.href = "/") : console.log("home");
+        }}
+      >
+        <p>
+          {" "}
+          <span
+            style={{
+              color: "rgba(238, 238, 238,1)",
+              textShadow: "0px 0px 5px black"
+            }}
+          >
+            #
+          </span>
+          Team World
+        </p>
       </button>
     </div>
   );

@@ -1,6 +1,5 @@
 .donate-container {
   min-height: 100vh;
-  padding-top: 300px;
   display: flex;
   justify-content: center;
 }
@@ -16,39 +15,62 @@
 }
 
 .donate-slider {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background: #006993;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 90px #006993;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 .donate-slide {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
 .spinner {
-  position: absolute;
-  /* margin-top: -60px;
-  margin-left: -60px; */
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 40px 90px rgba(255, 255, 255, 0.323);
-
-  z-index: 1;
-  padding: 300px;
-  /* border: 3px solid black; */
+  position: absolute !important;
+  box-sizing: border-box !important;
+  /* box-shadow: inset 0px 0px 40px 90px rgba(255, 255, 255, 0.323) !important; */
+  border: 5px solid black;
+  padding: 240px !important;
+  overflow: visible !important;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  display: grid;
-  place-content: center;
-  animation: spin 20s linear infinite;
+  height: 100px !important;
+  width: 100px !important;
+  display: grid !important;
+  place-content: center !important;
+  animation: spin 20s linear infinite !important;
+}
+
+.spinner .swiper-wrapper {
+  width: 100px !important;
+  height: 100px !important;
+  padding: 240px !important;
+  transform: none !important;
+
+  place-content: center !important;
 }
 
 .img-container {
-  position: absolute;
-  height: 120px;
-  width: 120px;
-  background: rgba(255, 255, 255, 0.1);
+  position: absolute !important;
+  height: 100px !important;
+  width: 100px !important;
+  background: #ffffff5a;
   border-radius: 50%;
-  animation: spin 20s linear infinite;
-  animation-direction: reverse;
-  z-index: 100;
+  animation: spin 20s linear infinite !important;
+  animation-direction: reverse !important;
+  z-index: 100 !important;
+  cursor: pointer;
+  /* centered text somehow */
+  margin: 5px;
+  border: 3px solid black;
+}
+
+.img-container:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 .content1 {
   top: 0;
@@ -84,11 +106,18 @@
   right: calc(25%);
 }
 .brand-image {
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   object-fit: contain;
   display: block;
   /* animation: rotate 100s linear infinite; */
+}
+
+.featured-image {
+  /* border-radius: 50%; */
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
 }
 
 @keyframes spin {
